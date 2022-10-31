@@ -1,0 +1,28 @@
+.sportsee-horizontal {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 8%;
+    height: 933px; 
+    justify-content: space-around; 
+}
+
+.sportsee-horizontalIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 10vh; */
+}
+.sportsee-horizontalIcon img {
+    width: 64px;
+    height: 64px;
+    margin-top: 40px;
+}
+
+.sportsee-horizontalCopyright {
+    color: white;
+    transform: rotate(-90deg);
+    font-weight: 500;
+    font-size: 12px;
+    white-space: nowrap;
+}
