@@ -18,3 +18,13 @@
     font-weight: 400;
     font-size: 18px;
 }
+.sportsee-homeNav {
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight: 400;
+    font-size: 18px;
+}
+.sportsee-homeNav a{
+    color: #ff0101;
+    margin-right: 50px;
+}

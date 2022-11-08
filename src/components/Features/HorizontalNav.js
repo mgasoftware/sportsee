@@ -15,7 +15,7 @@ export default function HorizontalNav() {
                 <a href="/"><img src={bike} alt="bike" /></a>
                 <a href="/"><img src={dumbbell} alt="dumbbell" /></a>
             </div>
-            <div className="sportsee-horizontalCopyright">Copiryght, SportSee 2020</div>
+            <div className="sportsee-horizontalCopyright">Copyright, SportSee 2020</div>
         </div>
     )
 }
