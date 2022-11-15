@@ -7,9 +7,6 @@ import '../../styles/Home.css'
 
 export default function Home() {
 
-    // const { data, loading, error } = useDatas("http://localhost:3000/user/12")
-
-
     return (
         <div className="App">
             <VerticalNav />

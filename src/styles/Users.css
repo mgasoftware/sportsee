@@ -1,0 +1,21 @@
+.sportsee-main {
+    width: 100%;
+}
+.sportsee-activity {
+    width: 835px;
+    height: 320px;
+    margin-left: 100px;
+    margin-top: 70px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249); 
+    border-radius: 5px;
+}
+
+.sportsee-activityTitle {
+    position: relative;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    top: 35px;
+    left: 32px;
+}
