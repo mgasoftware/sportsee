@@ -28,3 +28,12 @@
     color: #ff0101;
     margin-right: 50px;
 }
+
+.sportsee-homeNavTitle {
+    font-size: 48px;
+}
+
+.sportsee-homeNavText {
+    margin-top: 20px;
+    font-size: 48px;
+}

@@ -1,0 +1,12 @@
+.sportsee-customTooltipObjectif li {font-weight: 500;
+    font-size: 8px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.sportsee-customTooltipObjectifMin {
+    background: #FFFFFF;
+    padding-left: 7px;
+    padding-right: 7px;
+}

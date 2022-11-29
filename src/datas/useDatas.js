@@ -7,11 +7,12 @@ export default function useDatas(url, id) {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [api, setAPI] = useState(true);
-    const [urlMock, setUrlMock] = useState('');
+
+    const api = true;
 
     useEffect(() => {
         setLoading(true)
+
         if (api) {
             axios
                 .get(url)
@@ -25,41 +26,43 @@ export default function useDatas(url, id) {
                     setLoading(false);
                 })
         }
+
         else {
             if (url.includes("activity")) {
                 for (let i = 0; i < dataActivity.length; i++) {
                     if (dataActivity[i].data.userId === +id) {
-                        setUrlMock(dataActivity[i].data)
+                        setData(dataActivity[i]?.data)
+                        setLoading(false)
                     }
                 }
             }
-            else if(url.includes("performance")) {
-                setUrlMock(dataPerformance);
+            else if (url.includes("performance")) {
+                for (let i = 0; i < dataPerformance.length; i++) {
+                    if (dataPerformance[i].data.userId === +id) {
+                        setData(dataPerformance[i]?.data)
+                        setLoading(false)
+                    }
+                }
             }
-            else if(url.includes("average")) {
-                setUrlMock(dataAverageSessions);
+            else if (url.includes("average")) {
+                for (let i = 0; i < dataAverageSessions.length; i++) {
+                    if (dataActivity[i].data.userId === +id) {
+                        setData(dataAverageSessions[i]?.data)
+                        setLoading(false)
+                    }
+                }
             }
             else {
                 for (let i = 0; i < dataMock.length; i++) {
                     if (dataMock[i].data.id === +id) {
-                        setUrlMock(dataMock[i].data)
+                        setData(dataMock[i]?.data)
+                        setLoading(false)
                     }
                 }
             }
-            
-            fetch(urlMock)
-            .then((response) => {
-                setData(urlMock)
-                console.log(response)
-            })
-            .catch((err) => {
-                setError(err)
-            })
-            .finally(() => {
-                setLoading(false)
-            })
         }
-    }, [url, api, urlMock, id])
+
+    }, [url, api, id])
 
     return { data, loading, error }
 }

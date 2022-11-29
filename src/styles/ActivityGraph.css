@@ -1,13 +1,15 @@
 .sportsee-customTooltip li {
-    margin: 0;
-    padding: 1rem;
-    color: white;
-  }
-  
-  .sportsee-customTooltipCalorie {
-    background: #E60000 ;
-  }
-  .sportsee-customTooltipWeight {
-    background: #E60000 ;
-  }
-  
+  color: white;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: 7px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.sportsee-customTooltipCalorie {
+  background: #e60000;
+}
+.sportsee-customTooltipWeight {
+  background: #e60000;
+}

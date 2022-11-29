@@ -1,28 +1,26 @@
-import React from 'react'
-import { useParams } from 'react-router'
-import { BarChart, Bar , XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
-import useDatas from '../../datas/useDatas'
-import '../../styles/ActivityGraph.css'
+import useDatas from '../../datas/useDatas';
+import '../../styles/ActivityGraph.css';
 import Modelisation from './modelisation';
 
-export default function ActivityGraph() {
-    const id = useParams().id
-    let formatedData = []
-    let sessions = []
+export default function ActivityGraph(props) {
+    let formatedData = [];
+    let sessions = [];
 
-    let { data, loading, error } = useDatas("http://localhost:3000/user/" + id + "/activity", id)
+    let { data, loading, error } = useDatas("http://localhost:3000/user/" + props.id + "/activity", props.id);
 
-    if (loading) return <h1>Loading...</h1>
+    if (loading) return <h1>Loading...</h1>;
 
     if (error) {
-        console.log(error)
+        console.log(error);
     }
 
     if (data !== null) {
-        formatedData = new Modelisation(data)
-        sessions = formatedData.formatedActivity
+        formatedData = new Modelisation(data);
+        sessions = formatedData.formatedActivity;
     }
 
     function CustomTooltip({ active, payload }) {
@@ -47,9 +45,9 @@ export default function ActivityGraph() {
                     bottom: 55,
                 }}>
                 <CartesianGrid strokeDasharray="3" vertical={false} />
-                <XAxis tickLine={false} tickMargin="16" dataKey="index" padding={{ left: -45, right: -45 }}/>
+                <XAxis tickLine={false} tickMargin="16" dataKey="index" padding={{ left: -45, right: -45 }} />
                 <YAxis tickLine={false} tickMargin="32" dataKey="kcal" orientation="right" axisLine={false} />
-                <Tooltip content={<CustomTooltip />}/>
+                <Tooltip content={<CustomTooltip />} />
                 <Legend
                     verticalAlign="top"
                     align="right"
@@ -64,5 +62,5 @@ export default function ActivityGraph() {
                 <Bar name="Calories brûlées (kCal)" dataKey="kcal" fill="#E60000" barSize={8} radius={[50, 50, 0, 0]} />
             </BarChart>
         </ResponsiveContainer>
-    )
+    );
 }

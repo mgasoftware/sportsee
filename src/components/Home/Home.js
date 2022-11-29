@@ -13,8 +13,9 @@ export default function Home() {
             <div className="sportsee-center">
                 <HorizontalNav />
                 <nav className="sportsee-homeNav">
-                    <NavLink to="/user/12">Karl</NavLink>
-                    <NavLink to="/user/18">Cecilia</NavLink>
+                    <h1 className="sportsee-homeNavTitle">Choix du profil:</h1>
+                    <NavLink to="/user/12"><h1 className="sportsee-homeNavText">Karl</h1></NavLink>
+                    <NavLink to="/user/18"><h1 className="sportsee-homeNavText">Cecilia</h1></NavLink>
                 </nav>
             </div>
 

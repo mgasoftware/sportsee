@@ -1,28 +1,31 @@
-import React from 'react'
-import { useParams } from 'react-router'
+import React from 'react';
+import { useParams } from 'react-router';
 
-import '../../styles/Users.css'
-import HorizontalNav from '../Features/HorizontalNav'
-import VerticalNav from '../Features/VerticalNav'
-import useDatas from '../../datas/useDatas'
-import '../../styles/Home.css'
-import ActivityGraph from '../Features/ActivityGraph'
+import '../../styles/Users.css';
+import HorizontalNav from '../Features/HorizontalNav';
+import VerticalNav from '../Features/VerticalNav';
+import useDatas from '../../datas/useDatas';
+import '../../styles/Home.css';
+import ActivityGraph from '../Features/ActivityGraph';
+import AverageGraph from '../Features/AverageGraph';
+import PerfGraph from '../Features/PerfGraph';
+import ScoreGraph from '../Features/ScoreGraph';
 
 export default function Users() {
-    const id = useParams().id
+    const id = useParams().id;
     let firstName = '';
 
-    let { data, loading, error } = useDatas("http://localhost:3000/user/" + id, id)
+    let { data, loading, error } = useDatas("http://localhost:3000/user/" + id, id);
 
 
-    if (loading) return <h1>Loading...</h1>
+    if (loading) return <h1>Loading...</h1>;
 
     if (error) {
-        console.log(error)
+        console.log(error);
     }
 
     if (data !== null) {
-        firstName = data.userInfos.firstName
+        firstName = data.userInfos.firstName;
     }
 
     return (
@@ -37,10 +40,22 @@ export default function Users() {
                     </div>
                     <div className="sportsee-activity">
                         <h3 className="sportsee-activityTitle">Activité quotidienne</h3>
-                        <ActivityGraph />
+                        <ActivityGraph id={id}/>
+                    </div>
+                    <div className="sportsee-graph">
+                        <div className="sportsee-average">
+                            <h3 className="sportsee-averageTitle">Durée moyenne des <br />sessions</h3>
+                            <AverageGraph id={id}/>
+                        </div>
+                        <div className="sportsee-radar">
+                            <PerfGraph id={id}/>
+                        </div>
+                        <div className="sportsee-score">
+                            <ScoreGraph id={id}/>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
