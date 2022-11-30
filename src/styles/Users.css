@@ -1,5 +1,26 @@
-.sportsee-main {
+.sportsee-body {
     width: 100%;
+    display: flex;
+}
+.sportsee-center {
+    display: flex;
+}
+
+.sportsee-centerText {
+    margin-left: 100px;
+    margin-top: 60px;
+}
+.sportsee-centerText h1 {
+    font-weight: 500;
+    font-size: 48px;
+}
+.sportsee-centerText h1 span {
+    color: #ff0101;
+}
+.sportsee-centerText p {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
 }
 .sportsee-activity {
     width: 835px;
@@ -52,4 +73,27 @@
     margin-top: 30px;
     background: #282D30;
     border-radius: 5px;
+}
+
+.sportsee-health {
+    margin-top: 234px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .sportsee-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .sportsee-centerText {
+        margin-top: 30px;
+    }
+    .sportsee-activity {
+        margin-top: 30px;
+    }
+    .sportsee-health {
+        margin-top: 20px;
+        margin-left: 100px;
+        display: flex;
+    }
 }

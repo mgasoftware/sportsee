@@ -6,6 +6,7 @@ export default class Modelisation {
         this.dataPerfs = data?.data;
         this.todayScore = data?.todayScore;
         this.score = data?.score;
+        this.keyDatas = data?.keyData;
     }
 
     get formatedActivity() {

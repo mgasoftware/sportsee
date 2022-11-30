@@ -1,0 +1,40 @@
+.sportsee-healthMain {
+    width: 258px;
+    height: 124px;
+    background-color: #fbfbfb;
+    margin-bottom: 39px;
+    margin-left: 31px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sportsee-healthIcon {
+    margin-left: 32px;
+    margin-right: 24px;
+}
+.sportsee-healthDataNum {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.sportsee-healthDataName{
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+}
+
+@media screen and (max-width: 1024px) {
+    .sportsee-healthMain {
+        width: 150px;
+        margin-left: 0px;
+        margin-right: 60px;
+        margin-bottom: 0px;
+        background-color: white;
+    }
+    .sportsee-healthIcon {
+        margin-left: 0px;
+        margin-right: 24px;
+    }
+}
