@@ -40,7 +40,8 @@ export default class Modelisation {
     formatPerf() {
         return (
             this.dataPerfs = this.dataPerfs?.map((dataPerf) => ({
-                kind: this.kind[dataPerf.kind].charAt(0).toUpperCase() + this.kind[dataPerf.kind].slice(1), value: dataPerf.value
+                // kind: this.kind[dataPerf.kind].charAt(0).toUpperCase() + this.kind[dataPerf.kind].slice(1), value: dataPerf.value
+                kind: ['Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio'], value: dataPerf.value
             }))
         );
     }
