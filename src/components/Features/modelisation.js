@@ -7,6 +7,7 @@ export default class Modelisation {
         this.todayScore = data?.todayScore;
         this.score = data?.score;
         this.keyDatas = data?.keyData;
+        this.category = ['Cardio','Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
     }
 
     get formatedActivity() {
@@ -41,7 +42,7 @@ export default class Modelisation {
         return (
             this.dataPerfs = this.dataPerfs?.map((dataPerf) => ({
                 // kind: this.kind[dataPerf.kind].charAt(0).toUpperCase() + this.kind[dataPerf.kind].slice(1), value: dataPerf.value
-                kind: ['Intensité', 'Vitesse', 'Force', 'Endurance', 'Energie', 'Cardio'], value: dataPerf.value
+                kind: this.category[dataPerf.kind - 1], value: dataPerf.value
             }))
         );
     }

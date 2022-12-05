@@ -27,7 +27,7 @@ export default function Users() {
 
     const name = ["Calories", "Proteines", "Glucides", "Lipides"];
     let { data, loading, error } = useDatas("http://localhost:3000/user/" + id, id);
-    
+
     if (error) {
         console.log(error);
     }
@@ -58,6 +58,7 @@ export default function Users() {
                                 <div className="sportsee-graph">
                                     <div className="sportsee-average">
                                         <h3 className="sportsee-averageTitle">Durée moyenne des <br />sessions</h3>
+                                        <div className="sportsee-averageBack"></div>
                                         <AverageGraph id={id} />
                                     </div>
                                     <div className="sportsee-radar">

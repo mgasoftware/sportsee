@@ -46,13 +46,25 @@
 }
 
 .sportsee-average {
+    position: relative;
     width: 258px;
     height: 253px;
     padding-bottom: 10px;
     margin-left: 100px;
     margin-top: 30px;
-    background: linear-gradient(to right, #ff0000, #ff0000, #9b0101);
+    background: #ff0000;
     border-radius: 5px;
+}
+
+.sportsee-averageBack{
+    position: absolute;
+    background-color: #e60001;
+    width: 79px;
+    height: 263px;
+    top: 0px;
+    left: 179px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .sportsee-averageTitle {

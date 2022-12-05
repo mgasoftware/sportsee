@@ -47,10 +47,19 @@ export default function AverageGraph(props) {
                     tickMargin={10}
                     padding={{ left: 10, right: 10 }}
                     dataKey="day"
-                    stroke="rgba(255,255,255, 0.6)"
                     tickLine={false}
+                    fillOpacity={0.5}
+                    style={{
+                        transform: 'scale(0.9)',
+                        transformOrigin: 'bottom'
+                    }}
+                    tick={{
+                        fill: "#FFFFFF",
+                        fontWeight: 500,
+                        fontSize: 12
+                    }}
                     axisLine={false}
-                    type="category" />
+                    interval="preserveStartEnd" />
                 <YAxis
                     dataKey="min"
                     stroke="rgba(255, 255, 255, 0.9)"
