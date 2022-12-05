@@ -1,20 +1,45 @@
-
-.sportsee-homeNav {
-    margin-top: 40px;
-    margin-left: 50px;
-    font-weight: 400;
-    font-size: 18px;
-}
-.sportsee-homeNav a{
-    color: #ff0101;
-    margin-right: 50px;
+.sportsee-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 300px;
+    margin-top: 100px;
 }
 
 .sportsee-homeNavTitle {
     font-size: 48px;
 }
+.sportsee-homeNav {
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight: 400;
+    font-size: 18px;
+    display: flex;
+}
+
+.sportsee-homeNav a{
+    color: #ff0101;
+    margin-right: 50px;
+}
+
+.sportsee-homeImg{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
 
 .sportsee-homeNavText {
     margin-top: 20px;
-    font-size: 48px;
+    font-size: 28px;
+    text-align: center;
+    opacity: 0.6;
+    transition: opacity 1s;
+}
+a:hover .sportsee-homeImg {
+    border: 1px solid red;
+}
+a:hover .sportsee-homeNavText{
+    opacity: 1;
+    transition: opacity 1s;
 }

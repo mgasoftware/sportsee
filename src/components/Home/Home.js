@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import HorizontalNav from '../Features/HorizontalNav'
 import VerticalNav from '../Features/VerticalNav'
 import '../../styles/Home.css'
+import karlImg from '../../assets/karl.jpg'
+import ceciliaImg from '../../assets/cecilia.jpg'
 
 export default function Home() {
 
@@ -12,11 +14,24 @@ export default function Home() {
             <VerticalNav />
             <div className="sportsee-center">
                 <HorizontalNav />
-                <nav className="sportsee-homeNav">
-                    <h1 className="sportsee-homeNavTitle">Choix du profil:</h1>
-                    <NavLink to="/user/12"><h1 className="sportsee-homeNavText">Karl</h1></NavLink>
-                    <NavLink to="/user/18"><h1 className="sportsee-homeNavText">Cecilia</h1></NavLink>
-                </nav>
+                <div className="sportsee-home">
+                    <h1 className="sportsee-homeNavTitle">Qui est-ce ?</h1>
+                    <nav className="sportsee-homeNav">
+                        <NavLink to="/user/12">
+                            <div>
+                                <img src={karlImg} className="sportsee-homeImg" alt="karl" />
+                                <p className="sportsee-homeNavText">Karl</p>
+                            </div>
+                        </NavLink>
+                        <NavLink to="/user/18">
+                            <div>
+                                <img src={ceciliaImg} alt="cecilia" className="sportsee-homeImg" />
+                                <p className="sportsee-homeNavText">Cecilia</p>
+                            </div>
+                        </NavLink>
+                    </nav>
+                </div>
+
             </div>
 
         </div>
