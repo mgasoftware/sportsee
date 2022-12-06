@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import logo from '../../assets/logo.png'
-import '../../styles/VerticalNav.css'
+import logo from '../../assets/logo.png';
+import '../../styles/VerticalNav.css';
+
+/**
+ * Display the veritical nav bar
+ * @returns {JSX.Element}
+ */
 
 export default function VerticalNav() {
     return (
@@ -16,5 +21,5 @@ export default function VerticalNav() {
                 </ul>
             </nav>
         </div>
-    )
+    );
 }

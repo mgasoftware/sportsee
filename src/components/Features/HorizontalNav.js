@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-import meditate from '../../assets/meditate.png'
-import swim from '../../assets/swim.png'
-import bike from '../../assets/bike.png'
-import dumbbell from '../../assets/dumbbell.png'
-import '../../styles/HorizontalNav.css'
+import meditate from '../../assets/meditate.png';
+import swim from '../../assets/swim.png';
+import bike from '../../assets/bike.png';
+import dumbbell from '../../assets/dumbbell.png';
+import '../../styles/HorizontalNav.css';
+
+/**
+ * Display the horizontal nav bar
+ * @returns {JSX.Element}
+ */
 
 export default function HorizontalNav() {
     return (
@@ -17,5 +22,5 @@ export default function HorizontalNav() {
             </div>
             <div className="sportsee-horizontalCopyright">Copyright, SportSee 2020</div>
         </div>
-    )
+    );
 }

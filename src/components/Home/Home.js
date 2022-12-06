@@ -7,6 +7,11 @@ import '../../styles/Home.css'
 import karlImg from '../../assets/karl.jpg'
 import ceciliaImg from '../../assets/cecilia.jpg'
 
+/**
+ * Display Home Page
+ * @returns {JSX.Element}
+ */
+
 export default function Home() {
 
     return (
@@ -31,9 +36,7 @@ export default function Home() {
                         </NavLink>
                     </nav>
                 </div>
-
             </div>
-
         </div>
     )
 }

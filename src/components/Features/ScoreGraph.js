@@ -1,23 +1,25 @@
 import React from 'react';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import PropTypes from 'prop-types';
 
 import useDatas from '../../datas/useDatas';
 import Modelisation from './modelisation';
 
-import "../../styles/ScoreGraph.css"
+import "../../styles/ScoreGraph.css";
+
+/**
+ * Display graph of user score
+ * @param {object} props 
+ * @param {string} props.id
+ * @returns {JSX.Element}
+ */
 
 export default function ScoreGraph(props) {
     let formatedData = [];
     let score;
     let userScore = [];
 
-    let { data, loading, error } = useDatas("http://localhost:3000/user/" + props.id, props.id);
-
-    if (loading) return <h1>Loading...</h1>
-
-    if (error) {
-        console.log(error);
-    }
+    let { data } = useDatas("http://localhost:3000/user/" + props.id, props.id);
 
     if (data !== null) {
         formatedData = new Modelisation(data);
@@ -52,3 +54,7 @@ export default function ScoreGraph(props) {
         </div>
     )
 }
+
+ScoreGraph.propTypes = {
+    id: PropTypes.string.isRequired
+};

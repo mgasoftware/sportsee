@@ -12,12 +12,17 @@ import PerfGraph from '../Features/PerfGraph';
 import ScoreGraph from '../Features/ScoreGraph';
 import Modelisation from '../Features/modelisation';
 import Health from '../Features/Health';
-import caloriesIcon from '../../assets/calories.svg'
-import proteinesIcon from '../../assets/proteines.svg'
-import carbsIcon from '../../assets/carbs.svg'
-import fatIcon from '../../assets/fat.svg'
+import caloriesIcon from '../../assets/calories.svg';
+import proteinesIcon from '../../assets/proteines.svg';
+import carbsIcon from '../../assets/carbs.svg';
+import fatIcon from '../../assets/fat.svg';
 import Loading from '../Features/Loading';
 import Error from '../Features/Error';
+
+/**
+ * Display user page
+ * @returns {JSX.Element}
+ */
 
 export default function Users() {
     const id = useParams().id;
@@ -35,7 +40,7 @@ export default function Users() {
     if (data !== null) {
         firstName = data.userInfos.firstName;
         formatedData = new Modelisation(data);
-        dataHealth = formatedData.keyDatas;
+        dataHealth = formatedData.keyData;
     }
 
     return (

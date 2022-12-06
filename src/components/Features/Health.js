@@ -1,13 +1,22 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import "../../styles/Health.css"
+import "../../styles/Health.css";
+
+/**
+ * Display card of the data health
+ * @param {object} props 
+ * @param {string} props.name 
+ * @param {string} props.icon 
+ * @param {number} props.data 
+ * @returns {JSX.Element}
+ */
 
 export default function Health(props) {
     let data = props.data;
     let name = props.name;
     let icon = props.icon;
-    let internationalNumberFormat = new Intl.NumberFormat('en-US')
-    console.log(internationalNumberFormat.format(data))
+    let internationalNumberFormat = new Intl.NumberFormat('en-US');
 
     return (
         <div className="sportsee-healthMain">
@@ -22,5 +31,11 @@ export default function Health(props) {
                 <p className="sportsee-healthDataName">{name}</p>
             </div>
         </div>
-    )
+    );
 }
+
+Health.propTypes = {
+    name: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    data: PropTypes.number
+};

@@ -1,4 +1,17 @@
+import PropTypes from 'prop-types';
+
 export default class Modelisation {
+    /**
+     * 
+     * @param {object} data 
+     * @param {number} data.userId
+     * @param {object} data.sessions
+     * @param {object} data.kind
+     * @param {object} data.data
+     * @param {number} data.todayScore
+     * @param {number} data.score
+     * @param {object} data.keyData
+     */
     constructor(data) {
         this.userId = data?.userId;
         this.sessions = data?.sessions;
@@ -6,8 +19,8 @@ export default class Modelisation {
         this.dataPerfs = data?.data;
         this.todayScore = data?.todayScore;
         this.score = data?.score;
-        this.keyDatas = data?.keyData;
-        this.category = ['Cardio','Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité']
+        this.keyData = data?.keyData;
+        this.category = ['Cardio', 'Energie', 'Endurance', 'Force', 'Vitesse', 'Intensité'];
     }
 
     get formatedActivity() {
@@ -22,6 +35,10 @@ export default class Modelisation {
         return this.formatPerf().reverse();
     }
 
+    /**
+     * @param {object} sessions
+     * @returns {object}
+     */
     formatActivity() {
         return (
             this.sessions = this.sessions?.map((session, index) => ({
@@ -30,6 +47,10 @@ export default class Modelisation {
         );
     }
 
+    /**
+     * @param {object} sessions
+     * @returns {object}
+     */
     formatAverage() {
         return (
             this.sessions = this.sessions?.map((session) => ({
@@ -38,6 +59,10 @@ export default class Modelisation {
         );
     }
 
+    /**
+     * @param {object} dataPerfs
+     * @returns {object}
+     */
     formatPerf() {
         return (
             this.dataPerfs = this.dataPerfs?.map((dataPerf) => ({
@@ -47,3 +72,7 @@ export default class Modelisation {
         );
     }
 }
+
+Modelisation.propTypes = {
+    data: PropTypes.object.isRequired
+};

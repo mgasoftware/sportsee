@@ -2,6 +2,11 @@ import React from 'react';
 
 import '../../styles/Error.css';
 
+/**
+ * Display error page
+ * @returns {JSX.Element}
+ */
+
 export default function Error() {
     return (
         <div className="sportsee-error">
@@ -13,5 +18,5 @@ export default function Error() {
                 <p>Retourner sur la page d’accueil</p>
             </a>
         </div>
-    )
+    );
 }

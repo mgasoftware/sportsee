@@ -1,22 +1,23 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-
+import PropTypes from 'prop-types';
 
 import useDatas from '../../datas/useDatas';
 import '../../styles/ActivityGraph.css';
 import Modelisation from './modelisation';
 
+/**
+ * Display graph of user activity
+ * @param {object} props 
+ * @param {string} props.id
+ * @returns {JSX.Element}
+ */
+
 export default function ActivityGraph(props) {
     let formatedData = [];
     let sessions = [];
 
-    let { data, loading, error } = useDatas("http://localhost:3000/user/" + props.id + "/activity", props.id);
-
-    if (loading) return <h1>Loading...</h1>;
-
-    if (error) {
-        console.log(error);
-    }
+    let { data } = useDatas("http://localhost:3000/user/" + props.id + "/activity", props.id);
 
     if (data !== null) {
         formatedData = new Modelisation(data);
@@ -64,3 +65,7 @@ export default function ActivityGraph(props) {
         </ResponsiveContainer>
     );
 }
+
+ActivityGraph.propTypes = {
+    id: PropTypes.string.isRequired
+};

@@ -1,25 +1,27 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types';
 
 import useDatas from '../../datas/useDatas';
 import Modelisation from './modelisation';
-import '../../styles/AverageGraph.css'
+import '../../styles/AverageGraph.css';
+
+/**
+ * Display graph of user average
+ * @param {object} props 
+ * @param {string} props.id
+ * @returns {JSX.Element}
+ */
 
 export default function AverageGraph(props) {
-    let formatedData = []
-    let averageSessions = []
+    let formatedData = [];
+    let averageSessions = [];
 
-    let { data, loading, error } = useDatas("http://localhost:3000/user/" + props.id + "/average-sessions", props.id)
-
-    if (loading) return <h1>Loading...</h1>
-
-    if (error) {
-        console.log(error)
-    }
+    let { data } = useDatas("http://localhost:3000/user/" + props.id + "/average-sessions", props.id);
 
     if (data !== null) {
-        formatedData = new Modelisation(data)
-        averageSessions = formatedData.formatedAverage
+        formatedData = new Modelisation(data);
+        averageSessions = formatedData.formatedAverage;
     }
 
     function CustomTooltip({ active, payload }) {
@@ -80,5 +82,9 @@ export default function AverageGraph(props) {
                     }} />
             </LineChart>
         </ResponsiveContainer>
-    )
+    );
 }
+
+AverageGraph.propTypes = {
+    id: PropTypes.string.isRequired
+};
