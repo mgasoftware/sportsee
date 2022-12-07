@@ -18,6 +18,7 @@
 * [Recharts](https://recharts.org/en-US/) (version 2.1.16)
 * [react-router-dom](https://reactrouter.com/web/guides/quick-start) (version 6.4.2)
 * [Prop-types](https://www.npmjs.com/package/prop-types) (version 15.8.1)
+* [axios](https://axios-http.com/fr/docs/intro) (version 1.1.3)
 
 ### Step 1 : Installing and launching back-end
 

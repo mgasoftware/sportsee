@@ -53,7 +53,7 @@ export default function ActivityGraph(props) {
                     verticalAlign="top"
                     align="right"
                     iconType={'circle'}
-                    iconSize={'.5rem'}
+                    iconSize={'8px'}
                     wrapperStyle={{
                         top: '-0%',
                         right: '1rem',
