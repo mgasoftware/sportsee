@@ -99,13 +99,21 @@
     }
     .sportsee-centerText {
         margin-top: 30px;
+        margin-left: 50px;
     }
     .sportsee-activity {
         margin-top: 30px;
+        margin-left: 50px;
+    }
+    .sportsee-graph {
+        margin-left: 50px;
+    }
+    .sportsee-average {
+        margin-left: 0px;
     }
     .sportsee-health {
         margin-top: 20px;
-        margin-left: 100px;
+        margin-left: 50px;
         display: flex;
     }
 }
