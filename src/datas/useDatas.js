@@ -16,7 +16,7 @@ export default function useDatas(url, id) {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const api = true;
+    const api = false;
 
     useEffect(() => {
         setLoading(true)
