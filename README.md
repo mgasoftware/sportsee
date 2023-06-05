@@ -1,5 +1,9 @@
 # SportSee
 
+## Project description
+
+SportSee is a project I carried out as part of my Front-end Developer training at OpenClassrooms. I integrated and developed an analytics dashboard for a sports web application using HTML, CSS, JavaScript, React, React Router, Sass, and the Recharts data visualization tool. I also used an API to retrieve the data needed to display the graphs. The end result is a functional and aesthetically pleasing dashboard, enabling users to analyze their sports performance in detail.
+
 ## Installation
 
 ### Recommanded IDE
